@@ -1,0 +1,31 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: url-shortener-agentic
+  datasource:
+    url: jdbc:h2:file:./data/shortener;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ''
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+app:
+  short-url-base: ${SHORT_URL_BASE:http://localhost:8080/r/}
+  default-ttl-days: ${SHORT_URL_DEFAULT_TTL_DAYS:30}
+  expiry-sweep-ms: ${SHORT_URL_EXPIRY_SWEEP_MS:60000}
+  ai:
+    enabled: ${AI_ENABLED:false}
+    base-url: ${AI_BASE_URL:https://api.openai.com/v1}
+    api-key: ${AI_API_KEY:}
+    model: ${AI_MODEL:gpt-4o-mini}
