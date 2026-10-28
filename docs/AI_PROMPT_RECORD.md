@@ -16,7 +16,7 @@
 | Keep lifecycle status and timestamps in the entity | Accepted | Makes lifecycle state inspectable and allows scheduled persistence for links nobody visits. |
 
 ### P2 — Align repository quality artifacts with the reference repository
-**Prompt summary:** use `https://github.com/sreenathsede/course-waitlist` as a structure/style reference; add a `verification/` folder, document class/method behavior, and make human/AI review records evidence-oriented.
+**Prompt summary:** use  structure/style reference; add a `verification/` folder, document class/method behavior, and make human/AI review records evidence-oriented.
 
 **Response summary:** added `AGENTS.md`, `verification/run.sh`, `verification/check.py`, `verification/README.md`, expanded review records, and JavaDoc comments for declared types and methods. The reference repository's approach emphasizes explicit invariants, requirement-to-test evidence, seeded-bug detection, and not claiming checks that were not run.
 
@@ -42,7 +42,3 @@
 - Add runtime integration tests for redirect, expiry, revocation, and analytics.
 - Consider versioned schema migration for existing databases.
 - Extend the workflow from plan generation to safe, sandboxed tool execution only if the assessment scope permits it.
-
-## 4. Candidate / maintainer confirmation
-
-Before submission, confirm the prompt summaries and decisions reflect the actual workflow, append any additional prompts, and distinguish assistant-produced statements from commands personally run by the candidate.
